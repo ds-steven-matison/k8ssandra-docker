@@ -71,15 +71,14 @@ kubectl delete pod k8ssandra-docker-6fd6b955f6-6ldk5
 ## Cluster should look like
 
 ```
-NAME                                                READY   STATUS      RESTARTS   AGE
-k8ssandra-reaper-operator-79fd5b4655-qvgls          1/1     Running     0          152m
-k8ssandra-cass-operator-7d5df6d49-pc5cj             1/1     Running     0          152m
-k8ssandra-grafana-5c6d5b8f5f-w67fw                  2/2     Running     0          152m
-k8ssandra-kube-prometheus-operator-85695ffb-6fpfl   1/1     Running     0          152m
-prometheus-k8ssandra-kube-prometheus-prometheus-0   2/2     Running     1          151m
-k8ssandra-dc1-default-sts-0                         2/2     Running     0          151m
-k8ssandra-reaper-schema-cqgm6                       0/1     Completed   0          148m
-k8ssandra-reaper-7bb77d575c-n9sv9                   1/1     Running     0          148m
-k8ssandra-dc1-stargate-646d6bcd68-d46rp             1/1     Running     0          152m
-mk8ssandra-docker-6fd6b955f6-v66xs                  1/1     Running     0          3m45s
+NAME                                                READY   STATUS    RESTARTS   AGE
+k8ssandra-kube-prometheus-operator-85695ffb-f42fv   1/1     Running   0          25m
+k8ssandra-reaper-operator-b67dc8cdf-j5hnw           1/1     Running   0          25m
+prometheus-k8ssandra-kube-prometheus-prometheus-0   2/2     Running   1          24m
+k8ssandra-cass-operator-7c876d6d96-4pdjr            1/1     Running   0          25m
+k8ssandra-grafana-5c6d5b8f5f-fj9r4                  2/2     Running   0          25m
+k8ssandra-dc1-default-sts-0                         2/2     Running   0          24m
+k8ssandra-reaper-655fc7dfc6-dct2n                   1/1     Running   0          20m
+k8ssandra-dc1-stargate-77d4985d67-gfjwq             1/1     Running   0          25m
+k8ssandra-docker-576fbdbd97-4kl2x                   1/1     Running   0          3m43s
 ```
