@@ -4,4 +4,3 @@
 *.md
 deployment.yaml
 deployment.k8s.yaml
-cloudbuild.yaml

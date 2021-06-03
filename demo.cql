@@ -30,4 +30,4 @@ CREATE TABLE IF NOT EXISTS images_saved (
 	image_source text,
   	PRIMARY KEY (uuid)
 );
-CREATE INDEX images_saved_id_idx ON memes_saved (id);
+CREATE INDEX images_saved_id_idx ON images_saved (id);
