@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memegen-v2
+spec:
+  selector:
+    matchLabels:
+      app: memegen-v2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: memegen-v2
+        env: gcp
+    spec:
+      containers:
+      - name: memegen-v2
+        image: docker.io/dsstevenmatison/memegen2:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+          - name: KEYSPACE
+            value: "memegen2"
+          - name: K8S_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: k8ssandra-superuser 
+                key: username
+          - name: K8S_PASSWORD
+            valueFrom: 
+              secretKeyRef:
+                name: k8ssandra-superuser 
+                key: password               
+          - name: K8S_AUTH_URL
+            value: "http://k8ssandra-dc1-stargate-service:8081/v1/auth"
+          - name: STARGATE_URL
+            value: "http://k8ssandra-dc1-stargate-service:8082"
+          - name: GRAPHQL_URL
+            value: "http://k8ssandra-dc1-stargate-service:8080/graphql/"
