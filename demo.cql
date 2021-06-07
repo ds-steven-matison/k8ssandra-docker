@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS images (
   	PRIMARY KEY (id)
 );
 
-INSERT INTO memegen(id,name,url,width,height,box_count) VALUES('87743020','Two Buttons','https://i.imgflip.com/1g8my4.jpg',600,908,2);
+INSERT INTO images(id,name,url,width,height,box_count) VALUES('87743020','Two Buttons','https://i.imgflip.com/1g8my4.jpg',600,908,2);
 
 DROP TABLE IF EXISTS images_saved;
 CREATE TABLE IF NOT EXISTS images_saved (
